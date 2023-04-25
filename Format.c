@@ -30,11 +30,8 @@ int Format(const char *format, va_list args)
 			}
 			if (validate(format[num2]) == 0)
 			{
-				num1 = invalidSpec(format[num2 - 1], format[num2], num1);			}
-			else
-			{
-				num1 += spec(format[num2], args);
-			}
+				num1 = invalidSpec(format[num2 - 1], format[num2], num1);
+			}	
 		}
 		else
 		{
