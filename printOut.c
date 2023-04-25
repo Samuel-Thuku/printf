@@ -1,4 +1,4 @@
-#include "_main.h"
+#include "main.h"
 #include <stdlib.h>
 /**
 *printOut - writes the character c to standard output.

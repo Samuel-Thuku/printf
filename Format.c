@@ -1,4 +1,4 @@
-#include "_main.h"
+#include "main.h"
 #include <stdlib.h>
 /**
 *Format - prints the format.
