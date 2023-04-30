@@ -11,6 +11,6 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
-int print_unsigned(unsigned int num, int base, const char *digits);
+int print_unsign(unsigned int num, int base, const char *digits);
 
 #endif
