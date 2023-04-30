@@ -1,6 +1,23 @@
 #include "main.h"
 
-struct specifier specifiers[];
+typedef struct specifier
+{
+	char c;
+	int (*handler)(va_list args);
+} specifier_t;
+specifier_t specifiers[] = {
+		{'c', print_char},
+		{'s', print_string},
+		{'%', print_percent},
+		{'d', print_int},
+		{'i', print_int},
+		{'b', print_binary},
+		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_hexadecimal},
+		{'X', print_HEXADECIMAL},
+		{'\0', NULL}
+	};
 /**
  * _printf - a function that produces output according to a format.
  * @format: is a character string.

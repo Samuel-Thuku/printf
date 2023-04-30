@@ -1,30 +1,24 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
+int _putchar(char c);
 int _printf(const char *format, ...);
 int print_unknown(char c);
-int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
-int print_unsigned(unsigned int num, int base, const char *digits);
-
-typedef struct specifier
-{
-	char c;
-	int (*handler)(va_list args);
-}specifier_t;
-specifier_t specifiers[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'%', print_percent},
-		{'d', print_int},
-		{'i', print_int},
-		{'\0', NULL}
-	};
+int print_int_helper(int n);
+int print_binary(va_list args);
+int print_unsigned(va_list args);
+int print_unsigned_rec(unsigned int n, unsigned int base, char *digits);
+int print_octal(va_list args);
+int print_hexadecimal(va_list args);
+int print_HEXADECIMAL(va_list args);
 
 #endif

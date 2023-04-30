@@ -1,17 +1,5 @@
 #include "main.h"
 
-
-/**
- * _putchar - Writes a character to stdout
- * @c: The character to write
- *
- * Return: On success, 1. On error, -1.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 /**
  * print_char - Print a character
  * @args: va_list argument containing the character to be printed
@@ -21,7 +9,7 @@ int print_char(va_list args)
 {
 	char c = va_arg(args, int);
 
-	write(1, &c, 1);
+	_putchar(c);
 	return (1);
 }
 
@@ -55,7 +43,7 @@ int print_string(va_list args)
 
 	while (*s)
 	{
-		write(1, s, 1);
+		_putchar(*s);
 		s++;
 		count++;
 	}
@@ -71,49 +59,6 @@ int print_string(va_list args)
 int print_percent(va_list args)
 {
 	(void)args;
-	write(1, "%", 1);
+	_putchar('%');
 	return (1);
-}
-
-
-/**
- * print_int - Print a signed integer
- * @args: va_list argument containing the integer to be printed
- * Return: Number of characters printed
- */
-int print_int(va_list args)
-{
-	int n = va_arg(args, int);
-	int count = 0;
-
-	if (n < 0)
-	{
-		write(1, "-", 1), count++;
-		n = -n;
-	}
-
-	count += print_unsigned(n, 10, "0123456789");
-	return (count);
-}
-
-/* Helper function to print unsigned integer with a given base and digit characters*/
-int print_unsigned(unsigned int num, int base, const char *digits)
-{
-	int count = 0;
-	char buffer[32];
-
-	int i = 0;
-	int j;
-
-	j = i - 1;
-	do {
-		buffer[i++] = digits[num % base];
-		num /= base;
-	} while (num > 0);
-	for (; j >= 0; j--)
-	{
-		write(1, &buffer[j], 1);
-		count++;
-	}
-	return (count);
 }

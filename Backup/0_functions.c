@@ -1,5 +1,17 @@
 #include "main.h"
 
+
+/**
+ * _putchar - Writes a character to stdout
+ * @c: The character to write
+ *
+ * Return: On success, 1. On error, -1.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
 /**
  * print_char - Print a character
  * @args: va_list argument containing the character to be printed
@@ -9,7 +21,7 @@ int print_char(va_list args)
 {
 	char c = va_arg(args, int);
 
-	_putchar(c);
+	write(1, &c, 1);
 	return (1);
 }
 
@@ -43,7 +55,7 @@ int print_string(va_list args)
 
 	while (*s)
 	{
-		_putchar(*s);
+		write(1, s, 1);
 		s++;
 		count++;
 	}
@@ -59,6 +71,6 @@ int print_string(va_list args)
 int print_percent(va_list args)
 {
 	(void)args;
-	_putchar('%');
+	write(1, "%", 1);
 	return (1);
 }
