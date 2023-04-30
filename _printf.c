@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+*struct specifier - struct specifiers
+*@c: the conversion specifier
+*@handler: the function pointer
+**/
+
 typedef struct specifier
 {
 	char c;
