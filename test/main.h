@@ -6,6 +6,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+#define BUFFER_SIZE 1024
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_unknown(char c);
@@ -20,5 +22,7 @@ int print_unsigned_rec(unsigned int n, unsigned int base, char *digits);
 int print_octal(va_list args);
 int print_hexadecimal(va_list args);
 int print_HEXADECIMAL(va_list args);
+int print_string_S(va_list args);
+int print_HEX(char c);
 
 #endif

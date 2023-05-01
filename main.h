@@ -22,5 +22,7 @@ int print_unsigned_rec(unsigned int n, unsigned int base, char *digits);
 int print_octal(va_list args);
 int print_hexadecimal(va_list args);
 int print_HEXADECIMAL(va_list args);
+int print_string_S(va_list args);
+int print_HEX(char c);
 
 #endif

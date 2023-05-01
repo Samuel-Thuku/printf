@@ -5,3 +5,4 @@ The exercises herein are meant to practice C - printf (Custom printf implementat
 3. 2-functions.c - Added a custom specifier %b to handle binary conversion
 4. 3-functions.c - Added handlers for specifiers u, o, x and X
 5. main.h - Added a local buffer of 1024 chars
+6. 5-functions.c - Implemented a custom specifier %S to print a string with non-printable characters

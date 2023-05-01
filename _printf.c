@@ -16,6 +16,7 @@ specifier_t specifiers[] = {
 		{'o', print_octal},
 		{'x', print_hexadecimal},
 		{'X', print_HEXADECIMAL},
+		{'S', print_string_S},
 		{'\0', NULL}
 	};
 /**
